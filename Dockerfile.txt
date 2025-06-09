@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy Gradle wrapper and build files
 COPY gradlew build.gradle2.kts settings.gradle.kts gradle/ ./
 
-RUN chmod -R +x gradlew gradle/
+RUN chmod -R +x gradlew gradle
 
 RUN ls -R gradle/wrapper
 
