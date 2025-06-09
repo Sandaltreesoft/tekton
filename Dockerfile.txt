@@ -14,7 +14,7 @@ COPY src/ ./src/
 RUN ./gradlew build --no-daemon
 
 # Runtime stage
-FROM openjdk:21-jre-slim
+FROM openjdk:21-slim
 
 # Set the working directory
 WORKDIR /app
