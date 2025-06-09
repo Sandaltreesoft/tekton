@@ -4,8 +4,12 @@ FROM gradle:8-jdk21-alpine AS builder
 # Set the working directory
 WORKDIR /app
 
+
+RUN ls -R .
 # Copy Gradle wrapper and build files
 COPY gradlew build.gradle2.kts settings.gradle.kts gradle/ ./
+
+RUN ls -R .
 
 RUN chmod -R 755 gradlew ./gradle
 
