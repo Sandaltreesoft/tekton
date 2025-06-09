@@ -20,7 +20,7 @@ RUN ls -R ./wrapper
 COPY src/ ./src/
 
 # Build the application
-RUN ./wrapper/gradlew build --no-daemon
+RUN ./gradlew build --no-daemon
 
 # Runtime stage
 FROM openjdk:21-slim
@@ -36,3 +36,4 @@ EXPOSE 8080
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
+	
