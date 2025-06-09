@@ -11,16 +11,16 @@ COPY gradlew build.gradle2.kts settings.gradle.kts gradle/ ./
 
 RUN ls -R .
 
-RUN chmod -R 755 gradlew ./gradle
+RUN chmod -R 755 gradlew ./wrapper
 
-RUN ls -R gradle/wrapper
+RUN ls -R ./wrapper
 
 
 # Copy the source code
 COPY src/ ./src/
 
 # Build the application
-RUN ./gradlew build --no-daemon
+RUN ./wrapper/gradlew build --no-daemon
 
 # Runtime stage
 FROM openjdk:21-slim
