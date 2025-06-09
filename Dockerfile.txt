@@ -5,7 +5,7 @@ FROM gradle:8-jdk21-alpine AS builder
 WORKDIR /app
 
 # Copy Gradle wrapper and build files
-COPY gradlew build.gradle2.kts settings.gradle gradle/ ./
+COPY gradlew build.gradle2.kts settings.gradle.kts gradle/ ./
 
 # Copy the source code
 COPY src/ ./src/
