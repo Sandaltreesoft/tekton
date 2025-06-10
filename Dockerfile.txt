@@ -20,7 +20,8 @@ RUN ls -R ./gradle
 COPY src/ ./src/
 
 # Build the application
-RUN ./gradlew bootJar --no-daemon
+RUN ./gradlew tasks
+#RUN ./gradlew bootJar --no-daemon
 RUN ls -R 
 RUN ls -R /app/build/libs
 RUN ls -R /app/
@@ -29,6 +30,7 @@ FROM openjdk:21-slim
 
 # Set the working directory
 WORKDIR /app
+RUN ls -R /app
 
 # Copy the built JAR from the builder stage
 COPY --from=builder /app/build/libs/*.jar app.jar
