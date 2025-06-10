@@ -20,7 +20,7 @@ RUN ls -R ./gradle
 COPY src/ ./src/
 
 # Build the application
-RUN ./gradlew tasks --no-daemon
+RUN ./gradlew build --no-daemon
 
 #RUN ./gradlew bootJar --no-daemon
 RUN ls -R 
