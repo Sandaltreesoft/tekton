@@ -23,6 +23,7 @@ COPY src/ ./src/
 RUN ./gradlew build --no-daemon
 RUN ls -R 
 RUN ls -R /app/build/libs
+RUN ls -R /app/
 # Runtime stage
 FROM openjdk:21-slim
 
