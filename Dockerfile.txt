@@ -5,15 +5,15 @@ FROM gradle:8-jdk21-alpine AS builder
 WORKDIR /app
 
 
-RUN ls -R .
+RUN ls 
 # Copy Gradle wrapper and build files
 COPY gradlew build.gradle2.kts settings.gradle.kts gradle ./
 
-RUN ls -R .
+RUN ls 
 
 RUN chmod -R 755 gradlew ./wrapper
 
-RUN ls -R ./wrapper
+RUN ls  ./wrapper
 
 
 # Copy the source code
