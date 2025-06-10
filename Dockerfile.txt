@@ -11,9 +11,9 @@ COPY gradlew build.gradle2.kts settings.gradle.kts  ./
 COPY gradle ./gradle/
 RUN ls 
 
-RUN chmod -R 755 gradlew ./wrapper
+RUN chmod -R 755 gradlew ./gradle
 
-RUN ls  ./wrapper
+RUN ls -R ./gradle
 
 
 # Copy the source code
